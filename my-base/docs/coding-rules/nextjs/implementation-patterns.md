@@ -56,7 +56,7 @@ export function LoginForm() {
 
 ## Server Actions
 
-Server Actions は feature 内の `actions/` ディレクトリに配置する。`contract-programming.md` に従い、入力の事前条件を検証する。
+Server Actions は feature 内の `actions/` ディレクトリに配置する。[contract-programming.md](based/coding-rules/contract-programming.md) に従い、入力の事前条件を検証する。
 
 ```typescript
 // features/auth/actions/login-action.ts
@@ -221,7 +221,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ## DI（依存性の注入）
 
-`clean-architecture.md` / `solid-principle.md`（DIP）に従い、Domain 層で定義したインターフェースを Infrastructure 層で実装する。Next.js ではクラスベースの DI コンテナではなく、関数ベースの注入を採用する。
+[clean-architecture.md](based/coding-rules/clean-architecture.md) / [solid-principle.md](based/coding-rules/solid-principle.md)（DIP）に従い、Domain 層で定義したインターフェースを Infrastructure 層で実装する。Next.js ではクラスベースの DI コンテナではなく、関数ベースの注入を採用する。
 
 ```typescript
 // features/auth/repositories/user-repository.ts — feature 内の Repository インターフェース（Port）
@@ -274,7 +274,7 @@ export async function getUser(id: string) {
 
 ## 環境変数の管理
 
-環境変数は `lib/env.ts` で一元管理する。`process.env` を直接参照せず、`env.ts` からインポートして使用する。`contract-programming.md` に従い、起動時にバリデーションを行い不正な値の混入を防ぐ。
+環境変数は `lib/env.ts` で一元管理する。`process.env` を直接参照せず、`env.ts` からインポートして使用する。[contract-programming.md](based/coding-rules/contract-programming.md) に従い、起動時にバリデーションを行い不正な値の混入を防ぐ。
 
 ```typescript
 // lib/env.ts — 環境変数の一元管理・バリデーション
@@ -319,7 +319,7 @@ const dbUrl = process.env.DATABASE_URL;
 
 ## エラーハンドリング
 
-`contract-programming.md` に従い、以下の方針で実装する。
+[contract-programming.md](based/coding-rules/contract-programming.md) に従い、以下の方針で実装する。
 
 | レイヤー | 方針 |
 | --- | --- |
@@ -350,7 +350,7 @@ export default function DashboardError({
 
 ## ドメインモデルの実装
 
-`domain-model.md` に従い、値オブジェクトとエンティティを実装する。Next.js ではクラスインスタンスの Server → Client 受け渡しに制約があるため、**Server Component 内でのみ使用するか、プレーンオブジェクトに変換してから Client に渡す**。
+[domain-model.md](based/coding-rules/domain-model.md) に従い、値オブジェクトとエンティティを実装する。Next.js ではクラスインスタンスの Server → Client 受け渡しに制約があるため、**Server Component 内でのみ使用するか、プレーンオブジェクトに変換してから Client に渡す**。
 
 ```typescript
 // features/auth/models/user.ts

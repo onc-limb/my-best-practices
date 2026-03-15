@@ -1,6 +1,6 @@
 # ディレクトリ構成
 
-`standards/coding-rules/feature-based.md` のディレクトリ構成を Next.js App Router に適用する。
+[feature-based.md](based/coding-rules/feature-based.md) のディレクトリ構成を Next.js App Router に適用する。
 
 ```
 src/
@@ -79,13 +79,13 @@ src/
 | `app/` | ルーティング定義とページの組み立て。ビジネスロジックを持たない | App Router の規約通り |
 | `features/` | ビジネスロジックとそれに紐づく UI・Server Actions・ドメインモデル | 特定の機能ドメインに属するもの |
 | `features/*/actions/` | Server Actions。ミューテーション専用（取得には使わない） | feature に紐づくサーバー側ミューテーション |
-| `features/*/models/` | エンティティ・値オブジェクト（`domain-model.md` に従う） | その feature 固有のドメインモデル |
+| `features/*/models/` | エンティティ・値オブジェクト（[domain-model.md](based/coding-rules/domain-model.md) に従う） | その feature 固有のドメインモデル |
 | `features/*/repositories/` | Repository インターフェース（Port） | そのドメインモデルの永続化契約 |
 | `components/` | 2つ以上の feature から使われる共通 UI | ドメイン非依存で再利用可能なもの |
 | `components/elements/` | アプリ全体の Provider・ラッパー等 | 横断的な関心事のコンポーネント |
 | `lib/` | 2つ以上の場所から使われる共通関数・設定 | ドメイン非依存なユーティリティ |
 | `lib/db/` | Drizzle クライアント・スキーマ・マイグレーション | DB 接続とスキーマ定義 |
-| `lib/repositories/` | Repository 実装（Adapter）。Drizzle 等の技術要素に依存 | `clean-architecture.md` の Infrastructure 層 |
+| `lib/repositories/` | Repository 実装（Adapter）。Drizzle 等の技術要素に依存 | [clean-architecture.md](based/coding-rules/clean-architecture.md) の Infrastructure 層 |
 
 ## バレルファイルの禁止
 

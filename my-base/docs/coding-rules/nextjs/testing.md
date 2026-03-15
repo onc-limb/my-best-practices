@@ -1,7 +1,7 @@
 # テストの書き方
 
 テスト戦略は **テスティングトロフィー** に従い、インテグレーションテストを最も厚くする。
-詳細は `standards/testing-strategy/testing-trophy.md` を参照。
+詳細は [testing-trophy.md](based/testing-strategy/testing-trophy.md) を参照。
 
 ## ツールチェーン
 

@@ -3,19 +3,18 @@
 <!-- 前提: アーキテクチャ規約・テスト戦略は別ドキュメントで定義済み -->
 <!-- 本ドキュメントはそれらを「Next.js + React でどう実装するか」に特化する -->
 
-## 参照する standards
+## 参照する基盤ドキュメント
 
-本規約は以下の standards に準拠する。各ドキュメントの内容はここでは繰り返さず、Next.js での具体的な実現方法を記載する。
+本規約は以下の基盤ドキュメントに準拠する。各ドキュメントの内容はここでは繰り返さず、Next.js での具体的な実現方法を記載する。
 
-| standards ファイル | 本規約での適用箇所 |
+| 基盤ドキュメント | 本規約での適用箇所 |
 | --- | --- |
-| `standards/coding-rules/feature-based.md` | ディレクトリ構成・コンポーネント分割 |
-| `standards/coding-rules/core-philosophy.md` | DRY / YAGNI / KISS の判断基準 |
-| `standards/coding-rules/solid-principle.md` | インターフェース設計・責務分離 |
-| `standards/coding-rules/clean-architecture.md` | レイヤー分離・依存方向 |
-| `standards/coding-rules/domain-model.md` | 値オブジェクト・エンティティの実装 |
-| `standards/coding-rules/contract-programming.md` | バリデーション・事前条件の実装 |
-| `standards/dev-environment/README.md` | Linter / Formatter / エディタ設定 |
+| [feature-based.md](based/coding-rules/feature-based.md) | ディレクトリ構成・コンポーネント分割 |
+| [core-philosophy.md](based/coding-rules/core-philosophy.md) | DRY / YAGNI / KISS の判断基準 |
+| [solid-principle.md](based/coding-rules/solid-principle.md) | インターフェース設計・責務分離 |
+| [clean-architecture.md](based/coding-rules/clean-architecture.md) | レイヤー分離・依存方向 |
+| [domain-model.md](based/coding-rules/domain-model.md) | 値オブジェクト・エンティティの実装 |
+| [contract-programming.md](based/coding-rules/contract-programming.md) | バリデーション・事前条件の実装 |
 
 ## 技術スタック
 
